@@ -59,7 +59,7 @@ app.get('/prices/city/:cityName', (req, res) => {
   res.status(200).json({ city: cityName, currency: 'MYR', price });
 });
 
-/*
+
 // Route for POST requests
 app.post('/', (req, res) => {
   const timestamp = new Date().toISOString().replace('T', ' ').slice(0, 19);
@@ -67,8 +67,8 @@ app.post('/', (req, res) => {
   console.log(JSON.stringify(req.body, null, 2));
   res.status(200).end();
 });
-*/
 
+/*
 // Route for POST requests
 app.post('/', (req, res) => {
   const value = req.body?.entry?.[0]?.changes?.[0]?.value;
@@ -91,6 +91,8 @@ app.post('/', (req, res) => {
   }
   res.status(200).end();
 });
+*/
+
 // Route to get the amount of miles a member has
 app.get('/miles/:memberId', (req, res) => {
   console.log("Miles Connector called");
