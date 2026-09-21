@@ -59,6 +59,16 @@ app.get('/prices/city/:cityName', (req, res) => {
   res.status(200).json({ city: cityName, currency: 'MYR', price });
 });
 
+/*
+// Route for POST requests
+app.post('/', (req, res) => {
+  const timestamp = new Date().toISOString().replace('T', ' ').slice(0, 19);
+  console.log(`\n\nWebhook received ${timestamp}\n`);
+  console.log(JSON.stringify(req.body, null, 2));
+  res.status(200).end();
+});
+*/
+
 // Route for POST requests
 app.post('/', (req, res) => {
   const value = req.body?.entry?.[0]?.changes?.[0]?.value;
